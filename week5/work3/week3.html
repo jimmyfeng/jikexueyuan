@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>找到数组[“a“，”x“，”b“，”d“，”m“，”a“，”k，“m”，“p”，“j”，“a”]出现最多的字母并给出个数和每一个所在的顺序。</p>
+    <p id="result"></p>
+    </div>
+</body>
+<script>
+// 定义一些常用变量
+var most,
+    position = [],
+    ob = {};
+arr = ["a", "x", "b", "d", "m", "a", "k", "m", "p", "j", "a"];
+// 把数组转化为一个对象，对象属性的值是个数
+for (var i = 0; i < arr.length; i++) {
+    var name = arr[i];
+    if (name in ob) {
+        ob[name]++;
+    } else {
+        ob[name] = 1;
+    }
+}
+// 在对象中找到个数最多的属性
+for (x in ob) {
+    if (most == undefined) {
+        most = x;
+    }
+    if (ob[most] < ob[x]) {
+        most = x;
+    }
+}
+// 通过遍历数组找到最多的字母的位置
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == most) {
+        position.push(i);
+    }
+}
+// 输出结果
+var result1 = "最多的字母是" + most + ",出现的位置是" + position;
+document.getElementById("result").innerHTML = result1;
+</script>

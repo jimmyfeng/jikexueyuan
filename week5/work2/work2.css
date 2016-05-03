@@ -1,0 +1,54 @@
+/*定义常用的css类，如背景颜色，弹性盒子等*/
+.dis-flex{
+	display: flex;
+}
+.flex-1{
+	flex: 1;
+}
+.flex-2{
+	flex: 2;
+}
+.grey1{
+	background-color: #dedade;
+}
+.grey1:hover{
+	background-color: #cecace;
+}
+.grey2{
+	background-color: #d1d0d1;
+}
+.grey2:hover{
+	background-color: #c1c0c1;
+}
+.orange{
+	background-color: #f8872e;
+}
+.orange:hover{
+	background-color: #e8771e;
+}
+/*设置容器的大小与位置*/
+.container{
+	margin: 50px auto;
+	width: 400px;
+}
+.container div{
+	height: 80px;
+	text-align: center;
+	font-weight: bold;
+}
+.container div span{
+	line-height: 80px;
+	font-size: 20px;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+/*数字显示屏*/
+.container #screen{
+	height: 100px;
+	background-color: #707681;
+	color: #fff;
+	padding: 20px;
+	text-align: right;
+	font-size: 40px;
+	line-height: 120px;
+}
