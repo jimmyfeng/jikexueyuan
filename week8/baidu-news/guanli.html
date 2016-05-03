@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>index</title>
+    <!-- 下面引入bootstrap文件与jquery -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/guanli.css">
+</head>
+
+<body>
+    <div class="myheader">
+        <!-- 页面头部，有导航栏和登录搜索内容，登录搜索放在右侧 -->
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+						新闻管理系统
+					</a>
+                    <button type="button" class="navbar-toggle collapsed navbar-btn" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <!-- 横向导航栏 -->
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">内容管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="mybody container">
+        <!-- 页面主体，分为左边的列表和右侧的内容 -->
+        <div class="row">
+            <div class="leftmnu col-sm-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active" data-div="look-news">查看新闻</a>
+                    <a href="#" class="list-group-item" data-div="add-news">添加新闻</a>
+                    <a href="#" class="list-group-item" data-div="delete-news">删除新闻</a>
+                    <a href="#" class="list-group-item" data-div="change-news">修改新闻</a>
+                </div>
+            </div>
+            <div class="content col-sm-9">
+                <!-- 页面内容使用了面包屑导航和显示页数的下标 -->
+                <div class="table-responsive look-news">
+                    <table class="table table-bordered table-hover look">
+                        <tr>
+                            <th>新闻id</th>
+                            <th>标题</th>
+                            <th>描述</th>
+                            <th>时间</th>
+                            <th>图片url地址</th>
+                            <th>新闻类型</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="add-news" style="display: none;">
+                    <form action="./php/upload.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="title">新闻标题</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="50字内">
+                        </div>
+                        <div class="form-group">
+                            <label for="detail">新闻简介</label>
+                            <textarea class="form-control" id="detail" rows="3" placeholder="100字内" name="detail"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile" name="upfile">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">新闻类型</label>
+                            <select class="form-control" id="type" name="type">
+                                <option>百家</option>
+                                <option>本地</option>
+                                <option>军事</option>
+                                <option>娱乐</option>
+                                <option>社会</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">上传</button>
+                    </form>
+                </div>
+                <div class="delete-news" style="display: none;">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>新闻id</th>
+                            <th>标题</th>
+                            <th>描述</th>
+                            <th>时间</th>
+                            <th>图片url地址</th>
+                            <th>新闻类型</th>
+                            <th>删除按钮</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="change-news" style="display: none;">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>新闻id</th>
+                            <th>标题</th>
+                            <th>描述</th>
+                            <th>时间</th>
+                            <th>图片url地址</th>
+                            <th>新闻类型</th>
+                            <th>修改按钮</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="change" style="display: none;">
+                    <form action="./php/change.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="title">新闻id</label>
+                            <input type="text" class="form-control" id="id" name="id" placeholder="输入id" readonly="true" disabled="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">新闻标题</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="50字内">
+                        </div>
+                        <div class="form-group">
+                            <label for="detail">新闻简介</label>
+                            <textarea class="form-control" id="detail" rows="3" placeholder="100字内" name="detail"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile" name="upfile">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">新闻类型</label>
+                            <select class="form-control" id="type" name="type">
+                                <option>百家</option>
+                                <option>本地</option>
+                                <option>军事</option>
+                                <option>娱乐</option>
+                                <option>社会</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">上传</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="myfooter">
+            <p>极客学院:www.jikexueyuan.com</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/guanli.js"></script>
+</body>
+
+</html>

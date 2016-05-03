@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container" id="index_view">
+        <!-- 页面头部工具条 -->
+        <header>
+            <div class="ui-new-toolbar">
+                <div class="ui-new-toolbar-l">
+                    <div class="ui-new-toolbar-btn btn-baidu"></div>
+                    <div class="ui-new-toolbar-btn btn-userhome"></div>
+                </div>
+                <div class="ui-new-toolbar-r">
+                    <div class="ui-new-toolbar-btn btn-search"></div>
+                    <div class="ui-new-toolbar-btn btn-subscribe"></div>
+                </div>
+            </div>
+        </header>
+        <!-- 页面主体 -->
+        <div id="index_view_content">
+        	<!-- 新闻分类导航栏 -->
+            <div id="index_view_navigator">
+                <div class="divider"></div>
+                <div class="content">
+                    <table>
+                        <tbody>
+                            <tr class="">
+                                <td colspan="1" data-type="tuijian" class="on">
+                                    <div><b></b><span>推荐</span></div>
+                                </td>
+                                <td colspan="1" data-type="baijia">
+                                    <div><b></b><span>百家</span></div>
+                                </td>
+                                <td colspan="1" data-type="bendi">
+                                <div><b></b><span>本地</span></div>
+                                </td>
+                                <td colspan="1" data-type="junshi">
+                                    <div><b></b><span>军事</span></div>
+                                </td>
+                                <td colspan="1" data-type="yule">
+                                    <div><b></b><span>娱乐</span></div>
+                                </td>
+                                <td colspan="1" data-type="shehui">
+                                    <div><b></b><span>社会</span></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 页面新闻版块 -->
+            <div id="index_view_sections">
+                <div class="index-view-subpage index-view-subpage-chosen">
+                    <div class="index-list">
+                    	<!-- 一条新闻的模板 -->
+                       <!--  <div class="index-list-item">
+                            <div class="index-list-main   showleft   ">
+                                <div class="index-list-image">
+                                    <i class="ivideoplay"></i>
+                                    <img src="images/newsPic/testPic.jpg">
+                                </div>
+                                <div class="index-list-main-text">
+                                    <div class="index-list-main-title">中捷宣布建立“战略伙伴关系”</div>
+                                    <div class="index-list-main-abs">中捷29日发表了联合声明。</div>
+                                </div>
+                                <div class="index-list-bottom">
+                                    <div class="index-list-main-time">
+                                        <b class="tip-time">2016-03-30</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- 加载更多按钮 -->
+                <div class="ui-refresh-wrapper">
+                    <div class="ui-refresh">点击加载更多</div>
+                </div>
+                <!-- 加载页面 -->
+                <div class="loading-page">
+                    <img src="images/loading.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/news.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

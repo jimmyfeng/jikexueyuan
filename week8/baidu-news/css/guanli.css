@@ -1,0 +1,12 @@
+/*头部背景色，解决了头部导航栏圆角的问题*/
+.myheader{
+	background-color: #333;
+}
+/*设置页面脚部样式*/
+.myfooter{
+	padding: 20px 0;
+	margin-top: 10px;
+	text-align: center;
+	color: #767676;
+	border-top: 1px solid #777;
+}
