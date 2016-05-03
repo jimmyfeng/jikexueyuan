@@ -1,0 +1,129 @@
+/*标准盒子模型*/
+.box1 .xiehe .xiezi {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	line-height: 100px;
+	text-align: center;
+}
+.box1 .xiehe {
+	padding: 20px;
+	background-color: orange;
+	border: 5px solid red;
+	margin: 30px;
+}
+.box1 {
+	position: absolute;
+	border: 1px solid black;
+}
+.hr1 {
+	margin-top: 300px;
+}
+/*怪异盒子模型*/
+.box2 .xiehe .xiezi {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	line-height: 100px;
+	text-align: center;
+}
+.box2 .xiehe {
+	padding: 20px;
+	background-color: orange;
+	border: 5px solid red;
+	margin: 30px;
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+}
+.box2 {
+	position: absolute;
+	border: 1px solid black;
+}
+/*弹性盒*/
+/*column分栏*/
+.flex-box {
+	-webkit-column-count:3;
+	-webkit-column-rule-style: dashed;
+}
+.flex-box img {
+	float: left;
+}
+/*水平分栏*/
+.flex-box1 {
+	display:-webkit-box;
+	width: 600px;
+	height: 300px;
+	list-style: none;
+	-webkit-box-orient:horizontal;
+}
+.flex-box1 li {
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+.flex-box1 li:nth-child(1) {
+	-webkit-order: 2;
+	-webkit-box-flex: 1;
+	background: #666;
+}
+.flex-box1 li:nth-child(2) {
+	-webkit-order: 1;
+	-webkit-box-flex: 2;
+	background: #999;
+}
+.flex-box1 li:nth-child(3) {
+	-webkit-order: 3;
+	-webkit-box-flex: 3;
+	background: #ccc;
+}
+
+/*垂直分栏*/
+.flex-box2 {
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	width: 600px;
+	height: 300px;
+	list-style: none;
+}
+.flex-box2 li {
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+.flex-box2 li:nth-child(1) {
+	-webkit-order: 2;
+	-webkit-box-flex: 1;
+	background: #666;
+}
+.flex-box2 li:nth-child(2) {
+	-webkit-order: 1;
+	-webkit-box-flex: 2;
+	background: #999;
+}
+.flex-box2 li:nth-child(3) {
+	-webkit-order: 3;
+	-webkit-box-flex: 3;
+	background: #ccc;
+}
+/*排序*/
+.order {
+	display: flex;
+}
+.order li {
+	padding: 0 20px;
+}
+.order li:nth-child(1) {
+	-webkit-order: 3;
+	background: #666;
+
+}
+.order li:nth-child(2) {
+	-webkit-order: 1;
+	background: #999;
+}
+.order li:nth-child(3) {
+	-webkit-order: 2;
+	background: #ccc;
+
+}

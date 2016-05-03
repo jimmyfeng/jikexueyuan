@@ -1,0 +1,384 @@
+/*月亮光晕效果*/
+@-webkit-keyframes moonlight {
+	0%{
+    	box-shadow: 0px 0px 60px 10px yellow;
+	}
+	50%{
+    	box-shadow: 0px 0px 20px 10px yellow;
+	}
+	100%{
+    	box-shadow: 0px 0px 60px 10px yellow;
+	}
+}
+@-moz-keyframes moonlight {
+	0%{
+    	box-shadow: 0px 0px 60px 10px yellow;
+	}
+	50%{
+    	box-shadow: 0px 0px 20px 10px yellow;
+	}
+	100%{
+    	box-shadow: 0px 0px 60px 10px yellow;
+	}
+}
+@keyframes moonlight {
+	0%{
+    	box-shadow: 0px 0px 60px 10px yellow;
+	}
+	50%{
+    	box-shadow: 0px 0px 20px 10px yellow;
+	}
+	100%{
+    	box-shadow: 0px 0px 60px 10px yellow;
+	}
+}
+/*一闪一闪亮晶晶*/
+@-webkit-keyframes twinkle-star {
+	50%{
+		opacity: .5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-moz-keyframes twinkle-star {
+	50%{
+		opacity: .5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes twinkle-star {
+	50%{
+		opacity: .5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+/*坠落的星星*/
+@-webkit-keyframes falling-star{
+	100%{
+		left: 20%;
+		top: 500px;
+		opacity: 0;
+		transform: rotate(360deg);
+	}
+}
+@-moz-keyframes falling-star{
+	100%{
+		left: 20%;
+		top: 500px;
+		opacity: 0;
+		transform: rotate(360deg);
+	}
+}
+@keyframes falling-star{
+	100%{
+		left: 20%;
+		top: 500px;
+		opacity: 0;
+		transform: rotate(360deg);
+	}
+}
+/*轮子滚动效果*/
+@-webkit-keyframes wheel-play{
+	50%{
+		transform: scale(1.05);
+    	margin-top: -1px;
+	}
+	100%{
+		transform: scale(1);
+    	margin-top: 1px;
+	}
+}
+@-moz-keyframes wheel-play{
+	50%{
+		transform: scale(1.05);
+    	margin-top: -1px;
+	}
+	100%{
+		transform: scale(1);
+    	margin-top: 1px;
+	}
+}
+@keyframes wheel-play{
+	50%{
+		transform: scale(1.05);
+    	margin-top: -1px;
+	}
+	100%{
+		transform: scale(1);
+    	margin-top: 1px;
+	}
+}
+/*坦克运行效果动画*/
+@-webkit-keyframes tank-run{
+	100%{
+		margin-left: 60%;
+	}
+}
+@-moz-keyframes tank-run{
+	100%{
+		margin-left: 60%;
+	}
+}
+@keyframes tank-run{
+	100%{
+		margin-left: 60%;
+	}
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/*设置夜空背景色*/
+html{
+	background: linear-gradient(#1F15D2 0%,black 80%);
+	height: 100%;
+}
+body{
+	overflow: hidden;
+}
+/*月亮样式*/
+.moon{    
+	width: 80px;
+    height: 80px;
+    position: absolute;
+    transform: rotate(-20deg);
+    transition: all .5s;
+    border-bottom-left-radius: 84px;
+    right: 50px;
+    top: 50px;
+    background-color: yellow;
+    border-radius: 100%;
+    -webkit-animation: moonlight 2s infinite linear;
+    -moz-animation: moonlight 2s infinite linear;
+    animation: moonlight 2s infinite linear;
+}
+/*星星样式*/
+.star > div{
+    height: 0px;
+    width: 0px;
+    border: 5px solid;
+    border-color: transparent transparent #fff;
+    border-bottom-width: 8px;
+    transform-origin: bottom;
+    position: absolute;
+}
+.s1{
+	transform: rotate(0deg);
+}
+.s2{
+	transform: rotate(72deg);
+}
+.s3{
+	transform: rotate(144deg);
+}
+.s4{
+	transform: rotate(-144deg);
+}
+.s5{
+	transform: rotate(-72deg);
+}
+/*星星的位置与动画*/
+.a-star{
+	position: absolute;
+    left: 200px;
+    top: 50px;
+    transform: rotate(30deg);
+	-webkit-animation: twinkle-star 1s .3s infinite;
+	-moz-animation: twinkle-star 1s .3s infinite;
+	animation: twinkle-star 1s .3s infinite;
+}
+.b-star{
+    position: absolute;
+    right: 300px;
+    top: 120px;
+    transform: rotate(-30deg);
+	-webkit-animation: twinkle-star 1s infinite;
+	-moz-animation: twinkle-star 1s infinite;
+	animation: twinkle-star 1s infinite;
+}
+.c-star{
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	margin-left: -5px;
+	margin-top: -8px;
+	-webkit-animation: falling-star 3s infinite ease-in;
+	-moz-animation: falling-star 3s infinite ease-in;
+	animation: falling-star 3s infinite ease-in;
+	transform-origin: center;
+}
+/*坦克样式*/
+.tank{
+	position: absolute;
+	width: 300px;
+	height: 300px;    
+	bottom: 10%;
+	-webkit-animation: tank-run 10s infinite linear;
+	-moz-animation: tank-run 10s infinite linear;
+	animation: tank-run 10s infinite linear;
+}
+.tank-bottom{
+	position: absolute;
+	width: 230px;
+	height: 80px;
+	background: linear-gradient(to right, #151412, #46463C);
+    border-radius: 50px 50px 115px 115px;
+    bottom: 0px;
+    border: 5px solid black;
+}
+.tank-inner-bottom{
+	position: absolute;
+	width: 200px;
+	height: 50px;
+    border: 5px solid black;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 45px 45px 105px 105px;
+    background-color: #434135;
+}
+/*坦克轮子*/
+.tank-inner-bottom .wheel{
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	border-radius: 100%;
+	background-color: #6E6F73;
+	border: 3px solid #000;
+	-webkit-animation: wheel-play .5s infinite ease-in;
+	-moz-animation: wheel-play .5s infinite ease-in;
+	animation: wheel-play .5s infinite ease-in;
+}
+.tank-inner-bottom .wheel:after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 10px;
+	top: 10px;
+	border: 2px solid #000;
+	border-radius: 100%;
+	background-color: #46463C;
+}
+/*轮子的定位*/
+.wheel1{
+    left: 7px;
+    top: 3px;
+}
+.wheel2{
+    left: 56px;
+    bottom: 2px;
+}
+.wheel3{
+    right: 56px;
+    bottom: 2px;
+}
+.wheel4{
+    right: 7px;
+    top: 2px;
+}
+/*坦克中部*/
+.tank-middle{
+	position: absolute;
+	width: 170px;
+	height: 25px;
+	border: 5px solid #000;
+	left: 30px;
+    bottom: 80px;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 30px 45px;
+    background-color: #86875F;
+}
+/*坦克炮管*/
+.tank-weapon{
+    position: absolute;
+    width: 90px;
+    height: 19px;
+    border: 4px solid #000;    
+    right: 60px;
+    bottom: 139px;
+    transform: rotate(-17deg);
+    background-color: #86875F;
+}
+.tank-weapon:after{
+	content: "";
+    position: absolute;
+    width: 20px;
+    height: 32px;
+    border: 4px solid #000;
+    right: -28px;
+    top: -12px;
+    border-radius: 10px;
+    background-color: #86875F;
+}
+/*坦克头部*/
+.tank-top{
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	border: 5px solid #000;    
+	left: 50px;
+    bottom: 110px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 80px 50px;
+    background-color: #86875F;
+}
+/*地面*/
+.ground{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	bottom: 0;
+	background-color: #744130;
+}
+/*树的样式*/
+.tree{
+	position: absolute;
+	width: 20px;
+	height: 50px;
+	border: 3px solid #000;
+	bottom: 30%;
+	background-color: #734015;
+	margin: 50px;
+}
+.tree:after{
+    content: "";
+    position: absolute;
+    border: 50px solid;
+    left: -40px;
+    top: -74px;
+    border-color: transparent transparent green;
+}
+.tree:before{
+    content: "";
+    position: absolute;
+    border: 40px solid;
+    border-color: transparent transparent green;
+    left: -30px;
+    top: -85px;
+}
+/*四棵树的位置*/
+.tree1{
+	transform: scale(1.5);
+	bottom: 10%;
+}
+.tree2{
+	transform: scale(2);
+	bottom: 10%;
+	left: 60%;
+}
+.tree3{
+	transform: scale(1.2);
+	left: 30%;
+	bottom: -5%;
+}
+.tree4{
+	transform: scale(1.1);
+	left: 80%;
+	bottom: -5%;
+	
+}

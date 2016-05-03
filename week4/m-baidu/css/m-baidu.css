@@ -1,0 +1,391 @@
+/*引入字体文件*/
+<!-- 
+/* include the idautomation.com Code39 WOFF Font -- */ 
+@font-face { font-family: icons; src: url(iconfont_6e53d3d8.woff); 
+} --> 
+/*一些页面的公用css设置*/
+html,body{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+    display: none;
+}
+/*对icon开头的class类进行统一修改，用到了css3选择器*/
+* [class^="icon-"]{
+    font-family: icons;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+}
+.container{
+    background: #eeeff0;
+    min-width: 320px;
+}
+.header{
+	height: 235px;
+    padding-bottom: 10px;
+}
+/*左上角天气样式*/
+.weather{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 6px;
+    height: 40px;
+    line-height: 40px;
+}
+.weather > *{
+	display: inline-block;
+}
+.icon-weather{
+	color: #b7babe;
+    font-size: 28px;
+    position: relative;
+    top: 3px;
+}
+.weather-num{
+    font-size: 20px;
+    color: #8c8c8c;
+    padding-left: 2px;
+    text-align: left;
+}
+.weather-status{
+    position: relative;
+    padding: 0 2px 0 7px;
+    top: 3px;
+}
+.weather-status p{
+    height: 13px;
+    line-height: 13px;
+    font-size: 11px;
+    color: #999;
+    margin: 0;
+    text-align: left;
+}
+.icon-down{ 
+	vertical-align: bottom;
+    height: 34px;
+}
+.icon-down:before{
+   	font-size: 20px;
+	content: '\e814';
+    color: #b6b7ba;
+    font: 17px/1 icons;
+}
+/*/右上角登录/*/
+.userinfo-wrap{
+	position: relative;
+    height: 54px;
+}
+.icon-login{
+    position: absolute;
+    top: 0;
+    right: 8px;
+    padding: 8px;
+    color: #9b9b9b;
+    font-size: 28px;
+    line-height: 20px;
+}
+.icon-login:before{    
+	content: '\e809';
+    color: #666;
+    font: 24px/1 icons;
+}
+/*百度logo*/
+.baidu-logo{
+	height: 55px;
+    padding: 17px 0 15px;
+}
+/*搜索表单*/
+.search-form{
+    margin: 0 10px;
+    height: 42px;
+    background: #fff;
+    border: 1px solid #949494;
+    border-bottom-color: #bcbcbc;
+}
+.search-box{
+    display: -webkit-box;
+    position: relative;
+}
+.search-area{
+	border-radius: 0;
+    margin: 0;
+    padding: 7px 100px 7px 6px;
+    height: 42px;
+    line-height: 28px;
+    resize: none;
+    overflow: hidden;
+    display: block;
+    -webkit-box-flex: 1;
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+.search-btn{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 82px;
+    height: 42px;
+    background: #38f;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 42px;
+    letter-spacing: -1px;
+    font-size: 16px;
+    border-top: 1px solid #38f;
+    border-bottom: 1px solid #38f;
+    box-sizing: inherit;    
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+/*搜索框下菜单栏*/
+.navs{	
+    margin: 17px 2% 14px;
+    overflow: hidden;
+}
+.navs a {
+    float: left;
+    width: 16.66%;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+.navs a i {
+    display: block;
+    margin-bottom: 4px;
+    height: 24px;
+}
+.navs-news:before{
+    content: '\e799';
+    color: #666;
+    font: 24px/1 icons;
+}
+.navs-novel:before{
+    content: '\e801';
+    color: #666;
+    font: 24px/1 icons;
+}
+.navs-video:before{
+    content: '\e802';
+    color: #666;
+    font: 24px/1 icons;
+}
+.navs-life:before{
+    content: '\e831';
+    color: #666;
+    font: 24px/1 icons;
+}
+.navs-map:before{
+    content: '\e804';
+    color: #666;
+    font: 24px/1 icons;
+}
+.navs-more:before{
+    content: '\e812';
+    color: #666;
+    font: 24px/1 icons;
+}
+/*用户卡片应用*/
+.plus-card{
+    position: relative;
+    padding: 0 8px 10px;
+}
+.hotword{
+    margin-top: 24px;
+    background: #fff;
+}
+.plus-title{
+    position: relative;
+    margin: 2px 14px 0;
+    height: 40px;
+    text-align: left;
+}
+.plus-title h2 {
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #999;
+}
+.hotword .refresh {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    width: 82px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    color: #262626;
+    font-size: 14px;
+    text-align: center;
+}
+.hotword .icon-refresh {
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+}
+.icon-refresh:before {
+    content: '\e60d';
+    color: #b6b7ba;
+    font: 18px/34px icons;
+}
+.plus-edit {
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 40px;
+    height: 34px;
+    text-align: center;
+    line-height: 40px;
+}
+.icon-edit:before {
+    content: '\e650';
+    color: #b6b7ba;
+    font: 20px/34px icons;
+}
+/*卡片内容*/
+.plus-content{    
+	padding: 0 14px;
+    text-align: left;
+    overflow: hidden;
+    margin-top: -5px;
+    font-size: 14px;
+}
+.plus-content li {
+    display: inline-block;
+    width: 50%;
+    height: 42px;
+    line-height: 42px;
+    vertical-align: top;
+    color: #262626;
+    float: left;
+}
+.plus-content li a{
+	text-decoration: none;
+	color: #262626;
+}
+.plus-content li a:visited{
+    color: #777;
+}
+.plus-content .hot {
+    display: inline-block;
+    position: relative;
+    padding-right: 17px;
+    max-width: 86%;
+    vertical-align: top;
+}
+.plus-content .hot:after {
+    position: absolute;
+    top: 2px;
+    right: -1px;
+    content: '\e653';
+    font: 20px/1 icons;
+    color: #fb4343;
+    -webkit-font-smoothing: antialiased;
+}
+.hot-search {
+    line-height: 42px;
+    text-align: right;
+    border-top: 1px solid #f4f5f6;
+}
+.hot-search a {
+    display: inline-block;
+    padding-right: 14px;
+    font-size: 14px;
+    color: #0058d2;
+}
+.icon-arrow-right:before {
+    content: '\e62f';
+    color: #0058d2;
+    font: 13px/1 icons;
+}
+/*管理卡片	*/
+.manage-card{
+    padding: 0;
+    line-height: 45px;
+    height: 45px;
+    color: #333;
+    font-size: 14px;
+    text-indent: -8px;
+    margin-top: 8px;
+    background: #fff;
+}
+/*页面尾部*/
+.bottom-ad{
+    margin: 0 28px;
+    padding: 0;
+}
+.bottom-ad li {
+    height: 33px;
+    line-height: 33px;
+    text-align: left;
+}
+.bottom-ad a {
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+    display: block;
+    padding-left: 21px;
+    font-size: 13px;
+    color: #555;
+    background: none no-repeat 0 center;
+}
+.hotIcon a:after {
+    content: '\e626';
+    position: absolute;
+    top: 6px;
+    left: -3px;
+    font: 21px/1 icons;
+    color: #ed5353;
+}
+.baiduIcon a {
+    background-image: url(../images/w_icon2.png);
+    -webkit-background-size: 15px 15px;
+}
+/*页面的脚*/
+#foot {
+    margin: 10px 28px 0;
+}
+#foot div a {
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width: 95px;
+    line-height: 34px;
+    color: #666;
+    font-size: 13px;
+}
+.icon-feedback {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/foot.png) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+#index-copyright {
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 6px 0 16px;
+    color: #999;
+}

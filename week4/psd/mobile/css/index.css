@@ -1,0 +1,149 @@
+/*全局背景色的设置以及头部背景色，用户头像的css设置*/
+.container{
+	background-color: #383a4c;
+}
+.container .header{
+	background-color: #424458;
+}
+.header .header-bg{
+	height: 150px;
+	background: url(../images/head-bg.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+.header-bg .head-portrait{
+	width: 92px;
+	height: 92px;
+	position: absolute;
+	bottom: -45px;
+	left: 50%;
+	margin-left: -45px;
+	border-radius: 100%;
+	background-color: rgba(255,255,255,0.25);
+	text-align: center;
+}
+.header-bg .head-portrait img{
+	border-radius: 100%;
+	padding: 6px;
+}
+/*user-info用户信息css样式，使用左浮动，进行贴边*/
+.user-info{
+	color: #fff;
+	margin-top: 50px;
+	text-align: center;
+}
+.user-info .user-talk{
+	padding: 0 3%;
+}
+.user-talk{
+	color: #babcc6;
+}
+.info-list{
+	height: 70px;
+}
+.info-list > div{
+	float: left;
+	width: 33%;
+}
+.info-list .split-line{
+	width: 0.5%;
+	background-color: #595b6c;    
+	height: 80%;
+    margin-top: 10px;
+}
+.info-list > div > h5{
+	font-size: 15px;
+	margin: 10px 0
+}
+.info-list > div > span{
+	font-size: 24px;
+} 
+.user-info .follow-btn{
+	width: 240px;
+	height: 34px;
+	background-color: #64a0d7;    
+	border: 0px;
+    border-radius: 6px;
+    margin: 20px;
+}
+/*content style 内容样式，导航栏使用浮动贴边*/
+.content .page-navs{
+	height: 50px;
+}
+.page-navs > div{
+	color: #8285a0;
+	height: 50px;
+	width: 25%;
+	float: left;
+	border-bottom: 1px solid #4c4e5e;
+	text-align: center;
+	line-height: 50px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.page-navs > div.active{
+	border-bottom: 3px solid #64a0d7;
+	color: #fff;
+}
+/*user-contents style 信息中用户头像，借鉴了双飞翼布局，浮动+margin来实现*/
+.user-content .user-photo{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.user-content .user-photo img{
+	width: 48px;
+	border-radius: 100%;
+	margin-top: 10px;
+}
+/*用户信息内容样式，写了一个公用的样式，让之后每一条信息都可以使用*/
+.content-detail{
+	margin-left: 20%;
+	min-height: 68px;
+	color: #fff;
+}
+.content-detail h3{
+	margin-bottom: 5px;
+}
+.content-detail p{
+	margin: 5px 0; 
+	color: #babcc6;
+	word-break: break-all;
+	padding-right: 3%;
+}
+.content-detail a{
+	color: #74b3ed;
+}
+.content-detail img{
+	width: 95%;
+}
+.content-detail .states{
+	padding: 10px 0;
+}
+/*自己切的雪碧图，制作一套icon图标*/
+.content-detail .states i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../images/sprite.png) no-repeat;
+}
+.content-detail .states .icon-like{
+	background-position: 0px 3px;
+}
+.content-detail .states .icon-comment{
+	background-position: -20px 2px;
+}
+.content-detail .states .icon-read{
+	background-position: -40px 4px;
+}
+/*更多按钮*/
+.more-btn{
+	display: block;
+	color: #fff;
+	width: 80%;
+	height: 34px;
+	background-color: #64a0d7;    
+	border: 0px;
+    border-radius: 6px;
+    margin: 0px auto;
+}

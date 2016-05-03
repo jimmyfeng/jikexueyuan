@@ -1,0 +1,243 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+input{
+	outline: none;
+}
+body{
+	min-width: 810px;
+}
+/*头部样式*/
+a:hover{
+	color: #00c;
+}
+.page-nav{
+    z-index: 2;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding: 0 96px 0 0;
+}
+.nav-li{
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+.nav-li-2{
+	display: inline-block;
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.nav-li-more{
+	position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+.nav-li-more:hover{
+	color: #fff;
+}
+.top-arrow{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+}
+/*设置按钮样式*/
+.setting:hover .setting-munu{
+	display: block;
+}
+.setting-munu{
+	display: none;
+	position: absolute;
+    width: 70px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    z-index: 20;
+    right: 72px;
+    top: 20px;
+    margin-top: 10px;
+}
+.setting-munu a{
+	display: block;
+    text-align: left;
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 9px;
+    text-decoration: none;
+    color: #333;
+}
+.setting-munu a:hover{
+	background-color: #38f;
+	color: #fff;
+}
+.top-arrow{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    margin-left: -7px;
+}
+.top-arrow em{
+    top: -1px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    border: 7px solid transparent;
+    border-style: dashed dashed solid dashed;
+	border-bottom-color: #d8d8d8;
+}
+.top-arrow i{
+    top: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    border: 7px solid transparent;
+    border-style: dashed dashed solid dashed;
+    border-bottom-color: #fff;
+}
+/*表单样式*/
+.baidu-search{
+	width: 100%;
+	height: 191px;
+	position: absolute;
+	top: 78px;
+	text-align: center;
+}
+.search-inputs{
+	width: 642px;
+	font-size: 0;
+    margin: 25px auto;
+}
+.search-inputs .search{
+	width: 540px;
+	height: 32px; 
+	border:1px solid;
+	border-color: #ccc transparent #ccc #ccc;
+	text-indent: 5px;
+	float: left;
+}
+.search-inputs .search:hover{
+	border-color: #999 transparent #b3b3b3 #999;
+}
+.search-inputs .search:focus{
+	border-color: #4791ff transparent #4791ff #4791ff;
+}
+.search-inputs .search-submit{
+    width: 100px;
+    height: 34px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;    
+    border: 1px solid #2d78f4;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+}
+.search-inputs .search-submit:hover{
+	background-color: #317ef3;
+	border-bottom: 1px solid #2868c8;
+	box-shadow: 1px 1px 1px #ccc;
+    top: 1px;
+    cursor: pointer;
+}
+/*footer样式*/
+.footer{
+	position: absolute;
+	bottom: 80px;
+	width: 100%;
+	text-align: center;
+}
+.qrcode{
+	display: inline-block;
+}
+.erweima{
+	width: 122px;
+	height: 60px;
+	line-height: 23px;
+	font-size: 12px;
+	float: left;
+}
+.erweima p{
+	padding: 8px 0 0 70px;
+	color: #4c4c4c
+}
+.erweima img{
+	float: left;
+}
+.erweima span{
+	color: #999;
+}
+.erweima-2{
+	margin-left: 33px;
+}
+.ftConw{
+	display: inline-block;
+	width: 334px;
+	height: 55px;
+	text-align: left;
+	font-size: 12px;
+	margin-left: 33px;
+    position: relative;
+    top: -12px;
+}
+.footer-line1{
+	margin: 16px 0 5px;
+}
+.ftConw .footer-line1 a{
+	color: #272727;
+	margin-right: 20px;
+}
+.footer-line2{
+	color: #666;
+}
+.footer-line2 a{
+	color: #666;
+}
+.line2-icon{
+    width: 14px;
+    height: 17px;    
+    display: inline-block;
+    overflow: hidden;
+	background: url(icons_d99e5dac.png) no-repeat;
+	background-position: -600px -96px;    
+	position: relative;
+    top: 3px;
+}
